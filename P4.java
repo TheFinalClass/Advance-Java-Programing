@@ -1,4 +1,5 @@
-package darshan;
+
+package vatsal;
 import java.sql.*;
 
 public class P4  {
@@ -7,10 +8,10 @@ public class P4  {
             Class.forName("com.mysql.jdbc.Driver");
             Connection c = DriverManager.getConnection("jdbc:mysql://localhost/P4","root","");
             Statement s = c.createStatement();
-            ResultSet rs= s.executeQuery("select * from student");
+            ResultSet rs= s.executeQuery("select * from sturec");
             System.out.println("Enroll | Name | Address | Mobile No | Email Id");
             while(rs.next()){
-                System.out.println(rs.getInt("Enroll")+","+rs.getString("Name")+","+rs.getString("Address")+","+rs.getInt("Mobile No")+","+rs.getString("Email Id"));
+                System.out.println(rs.getInt("Enroll")+ " | " +rs.getString("Name")+ " | " +rs.getString("Address")+ " | " +rs.getString("MobileNo")+ " | " +rs.getString("EmailId"));
             }
             
         } catch (Exception e) {
@@ -18,4 +19,3 @@ public class P4  {
         }       
     }     
 }
-
